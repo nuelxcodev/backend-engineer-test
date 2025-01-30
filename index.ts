@@ -7,7 +7,7 @@ import AuthicationRoute from "./routes/authentication/route";
 dotenv.config()
 const app: Application = express()
 
-const PORT: any = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 const ApiRoute: string = "/api/v1"
 
 app.use(express.json())
