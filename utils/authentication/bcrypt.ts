@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 
 export function HashData(data: string) {
     const salt = bcrypt.genSaltSync(10)
