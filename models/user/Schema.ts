@@ -18,9 +18,6 @@ const userSchema = new Schema({
         type: SchemaTypes.String,
         enum: ['user', 'admin'],
         default: 'user'
-    },
-    token: {
-        type: SchemaTypes.String,
     }
 })
 
