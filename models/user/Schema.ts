@@ -13,6 +13,14 @@ const userSchema = new Schema({
     password: {
         type: SchemaTypes.String,
         required: true,
+    },
+    role: {
+        type: SchemaTypes.String,
+        enum: ['user', 'admin'],
+        default: 'user'
+    },
+    token: {
+        type: SchemaTypes.String,
     }
 })
 

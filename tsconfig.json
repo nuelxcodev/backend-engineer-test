@@ -9,6 +9,6 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noEmitOnError": true,
-    "outDir": "./dist",
-  }
+    "outDir": "./dist"
+  },
 }
