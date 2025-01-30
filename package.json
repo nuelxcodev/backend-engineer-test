@@ -2,29 +2,30 @@
   "name": "backend-engineer-test",
   "version": "1.0.0",
   "description": "Build a simple RESTful API to create and manage products in a store",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": " nodemon index.ts",
-    "start": "ts-node index.ts",
+    "dev": "ts-node index.ts",
+    "start": "node dist/index.js",
     "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/dotenv": "^6.1.1",
-    "@types/jsonwebtoken": "^9.0.8",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.5",
-    "nodemailer": "^6.10.0"
+    "nodemailer": "^6.10.0",
+    "whatwg-url": "^11.0.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/bcryptjs": "^2.4.6",
+    "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.8",
     "@types/node": "^22.10.10",
     "bcryptjs": "^2.4.3",
     "nodemon": "^3.1.9",
