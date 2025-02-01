@@ -8,7 +8,6 @@ import { authenticate } from "../../middlewares/authenticateUsers";
 
 const productsRoute = Router();
 
-// 🔍 GET: Public access
 productsRoute.get("/products", getallProduct);
 
 

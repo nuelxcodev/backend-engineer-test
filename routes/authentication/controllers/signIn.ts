@@ -5,7 +5,7 @@ import { compareHashedData } from "../../../utils/authentication/bcrypt";
 
 export default async function SignIUser(req: Request, res: Response) {
     const { email, password } = req.body;
-    if (!( email && password)) {
+    if (!(email && password)) {
         res.status(400).json({
             success: false,
             message: "All fields are required",
@@ -41,7 +41,7 @@ export default async function SignIUser(req: Request, res: Response) {
         const hashedpassword = user_found?.password as string
         if (compareHashedData(hashedpassword, userPassword)) {
             const token = jwt.sign(
-                { userId: user_found?._id, role:user_found?.role },
+                { userId: user_found?._id, role: user_found?.role },
                 process.env.JWT_SECRET as string,
                 { expiresIn: '1d' }
             );
@@ -54,6 +54,9 @@ export default async function SignIUser(req: Request, res: Response) {
         }
 
     } catch (error) {
-
+        res.status(500).json({
+            success: false,
+            message: " an error occured"
+        })
     }
 }
